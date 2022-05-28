@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Header = ({Blog}) => {
+const Header = () => {
     const logo = "Dojo App";
     const [openOrCloseNav, setOpenOrCloseNav] = useState(false);
 
@@ -35,7 +35,7 @@ const Header = ({Blog}) => {
                 <ul className="hidden md:flex items-center space-x-10 md:mr-10 text-light font-light font-mono">
                     <a className="uppercase border-b-2 border-cyan-500 hover:text-cyan-500 transition" href="/">Home</a>
                     <a className="uppercase hover:text-cyan-500 transition" href="#about">About</a>
-                    <a className="uppercase bg-cyan-600 px-4 py-3 rounded hover:bg-cyan-700 transition" href="#create" onClick={() => Blog(true) }>Create Blog</a>
+                    <a className="uppercase bg-cyan-600 px-4 py-3 rounded hover:bg-cyan-700 transition" href="#create">Create Blog</a>
                 </ul>
             </nav>
 

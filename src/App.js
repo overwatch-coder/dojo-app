@@ -40,7 +40,7 @@ const App = () => {
 
   return ( 
     <div className="App">
-      <Header Blog = {Blog}  />
+      <Header />
       <Blog  blogs = {blogs} title ={title} handleDelete={handleDelete}/>
       <Footer />
     </div>
