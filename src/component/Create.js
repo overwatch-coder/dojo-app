@@ -2,7 +2,7 @@ const Create = () => {
     return ( 
         <div className="container mx-auto mt-10 flex justify-center items-center">
             <form action="#" method="POST" className="flex flex-col space-y-7 shadow-xl px-16 py-10 mt-6 rounded-xl w-full md:w-[60%]">
-                <h3 className="text-3xl text-center font-medium text-cyan-800 font-mono py-5">
+                <h3 className="text-3xl text-center font-medium text-cyan-800 font-[poppins] py-5">
                     Create A New Blog
                 </h3>
 
