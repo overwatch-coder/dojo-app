@@ -1,12 +1,6 @@
 {
   "posts": [
     {
-      "title": "This is a blog post",
-      "author": "Esther",
-      "body": "Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers.",
-      "id": 1
-    },
-    {
       "title": "What is a blog post",
       "author": "Brainy",
       "body": "A blog post is a single piece of content published on a blog, a shortened form of the now-archaic term weblog, which is an online platform for publishing written content. A blog can be a section of a website or a standalone website of its own.",
@@ -17,6 +11,24 @@
       "author": "Danny",
       "body": "Some effects require cleanup to reduce memory leaks.\n\nTimeouts, subscriptions, event listeners, and other effects that are no longer needed should be disposed.\n\nWe do this by including a return function at the end of the useEffect Hook.",
       "id": 4
+    },
+    {
+      "title": "JSON Server",
+      "author": "Kojo",
+      "body": "Get a full fake REST API with zero coding in less than 30 seconds (seriously)\n\nCreated with <3 for front-end developers who need a quick back-end for prototyping and mocking.",
+      "id": 5
+    },
+    {
+      "title": "Routes",
+      "author": "Esther",
+      "body": "Based on the previous db.json file, here are all the default routes. You can also add other routes using --routes.",
+      "id": 6
+    },
+    {
+      "author": "Overwatch",
+      "body": "   Also when doing requests, it's good to know that:\n\n    If you make POST, PUT, PATCH or DELETE requests, changes will be automatically and safely saved to db.json using lowdb.\n    Your request body JSON should be object enclosed, just like the GET output. (for example {\"name\": \"Foobar\"})\n    Id values are not mutable. Any id value in the body of your PUT or PATCH request will be ignored. Only a value set in a POST request will be respected, but only if not already taken.\n    A POST, PUT or PATCH request should include a Content-Type: application/json header to use the JSON in the request body. Otherwise it will return a 2XX status code, but without changes being made to the data.\n",
+      "title": "Getting started with JSON Server",
+      "id": 7
     }
   ]
 }
