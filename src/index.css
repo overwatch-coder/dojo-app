@@ -11,3 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
+
+.input-form{
+  @apply form-input w-full focus:ring-0 focus:border-cyan-600 focus:border-2 rounded placeholder:text-gray-400;
+}

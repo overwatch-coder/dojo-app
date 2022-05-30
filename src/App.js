@@ -8,11 +8,13 @@ import About from './component/About';
 import Home from './component/Home';
 import BlogDetails from './component/BlogDetails';
 import FetchAPI from './component/FetchAPI';
+import NotFound from './component/NotFound';
+import Update from './component/Update';
 
 const App = () => {
   const title = "All Blog Posts";
 
-  const { allData: blogs, isLoading, error, handleDelete } = FetchAPI('https://jsonplaceholder.typicode.com/posts');
+  const { allData: blogs, isLoading, error } = FetchAPI('http://localhost:8000/posts');
 
   return ( 
     <Router>
@@ -26,15 +28,17 @@ const App = () => {
 
           {isLoading && <Route path='blogs' element={ <h1 className='text-center text-4xl mt-36'>Loading...</h1> } />}
 
-          {blogs && <Route path='blogs' element={<Blog blogs = {blogs} title ={title} handleDelete={handleDelete} />} />}
+          { blogs && <Route path='blogs' element={<Blog blogs = {blogs} title ={title} />} />}
 
-          <Route path='blogs/:id' element={<BlogDetails />} />
+          <Route path='blogs/:id' element={<BlogDetails />} >
+              <Route path='update' element={<Update />} /> 
+          </Route>
 
           <Route path='create' element={<Create />} />
 
           <Route path='about' element={<About />} />
 
-          <Route path='*' element={<Navigate to='/' />} />
+          <Route path='*' element={<NotFound />} />
 
         </Routes>
         <Footer />

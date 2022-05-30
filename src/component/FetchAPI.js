@@ -24,14 +24,9 @@ const FetchAPI = (url) => {
              setError(err.message);
              setIsLoading(false);
          });
-     }, [url])
+     }, [url, allData])
 
-    const handleDelete = (id) => {
-    const newData = allData.filter(blog => id !== blog.id);
-    setAllData(newData);
-    }
-
-    return {allData, isLoading, error, handleDelete };
+    return {allData, isLoading, error };
 }
  
 export default FetchAPI;
