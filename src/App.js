@@ -14,7 +14,7 @@ import Update from './component/Update';
 const App = () => {
   const title = "All Blog Posts";
 
-  const { allData: blogs, isLoading, error } = FetchAPI('http://localhost:8000/posts');
+  const { allData: blogs, isLoading, error } = FetchAPI('http://localhost:8000/posts?_sort=id&_order=desc');
 
   return ( 
     <Router>
@@ -30,9 +30,9 @@ const App = () => {
 
           { blogs && <Route path='blogs' element={<Blog blogs = {blogs} title ={title} />} />}
 
-          <Route path='blogs/:id' element={<BlogDetails />} >
-              <Route path='update' element={<Update />} /> 
-          </Route>
+          <Route path='blogs/:id' element={<BlogDetails />} />
+
+         <Route path='blogs/:id/update' element={<Update />} />
 
           <Route path='create' element={<Create />} />
 
