@@ -1,5 +1,7 @@
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link, useNavigate, Routes, Route } from "react-router-dom";
 import FetchAPI from "./FetchAPI";
+import Update from './Update';
+
 
 const BlogDetails = () => {
     const { id } = useParams();
@@ -48,6 +50,10 @@ const BlogDetails = () => {
                         </div>
                         
                     </div>
+
+                    <Routes>
+                        <Route path='update' element={<Update title={blog.title} author={blog.author} body={blog.body} id={blog.id} />} />
+                    </Routes>
                     
                 </div>
             )}

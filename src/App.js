@@ -9,7 +9,6 @@ import Home from './component/Home';
 import BlogDetails from './component/BlogDetails';
 import FetchAPI from './component/FetchAPI';
 import NotFound from './component/NotFound';
-import Update from './component/Update';
 
 const App = () => {
   const title = "All Blog Posts";
@@ -30,9 +29,7 @@ const App = () => {
 
           { blogs && <Route path='blogs' element={<Blog blogs = {blogs} title ={title} />} />}
 
-          <Route path='blogs/:id' element={<BlogDetails />} />
-
-         <Route path='blogs/:id/update' element={<Update />} />
+          <Route path='blogs/:id/*' element={<BlogDetails />} />
 
           <Route path='create' element={<Create />} />
 
