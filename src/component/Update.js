@@ -12,6 +12,9 @@ const Update = ({title, author, body, id}) => {
         body: body,
         id: id
     })
+
+    const [error, setError] = useState('');
+
     const handleInputChange = (event) => {
         let name = event.target.name;
         let value = event.target.value;
@@ -31,16 +34,18 @@ const Update = ({title, author, body, id}) => {
         })
         .then(()=>{
             navigate('/blogs');
+            setError('');
         })
-        .catch(err => console.log(err.message));
+        .catch(err => setError(err.message));
 
     }
 
 
     return ( 
-        <div className="container mx-auto mt-10 flex justify-center items-center">
+        <div className="container mx-auto mt-20 flex justify-center items-center">
+            {error && <h3 className="text-center mt-10 text-red-500 text-xl">{error}</h3>}
         {
-            <form method="POST" className="flex flex-col space-y-7 shadow-xl px-16 py-10 mt-6 rounded-xl w-full md:w-[60%] font-[poppins]" onSubmit={handleSubmit}>
+            <form method="POST" className="flex flex-col space-y-7 shadow-xl px-16 py-10 mt-6 rounded-xl w-full md:w-[80%] font-[poppins]" onSubmit={handleSubmit}>
                 <h3 className="text-3xl text-center font-medium text-cyan-800 py-5">
                     Update Blog with ID - {id}
                 </h3>
